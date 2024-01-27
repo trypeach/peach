@@ -1,4 +1,4 @@
-Peach 🍑 - Blob Storage Reinvented
+# Peach 🍑 - Blob Storage Reinvented
 
 Welcome to Peach 🍑, the future of blob storage, where we've reimagined how data is stored, accessed, and processed in the cloud. It's 2024, and we believe it's time for a significant evolution in cloud storage solutions.
 
@@ -7,11 +7,11 @@ Peach is an open-source project designed to enhance the developer experience, of
 🌟 If you appreciate our vision and the legacy of great cloud storage solutions like S3, give us a star on GitHub!
 Features
 
-##### 📁 Enhanced Directory Management
+#### 📁 Enhanced Directory Management
 
 - First-Class Citizen Directories: Our approach elevates directories, offering advanced management and control.
 
-##### 🔒 Security/Network
+#### 🔒 Security/Network
 
 - **Built-In Rate Limiting:** Avoid surprise egress fees with intelligent rate limiting. 
 - **Size Limitation on Uploads:** Control file sizes during uploads using our advanced signed URL feature.
@@ -23,15 +23,15 @@ Features
 - **Automated Post/Pre Processing:** Resize images, convert audio, and more, seamlessly.
 - **Append to Files:** Increase flexibility by easily appending data to existing files.
 
-##### 🔍 Powerful Metadata Search
+#### 🔍 Powerful Metadata Search
 
 - **Metadata-Driven Search:** Find files quickly based on a variety of metadata parameters.
 
-##### 🚀 Single Binary Deployment
+#### 🚀 Single Binary Deployment
 
 - **Ease of Setup:** Peach will be available as a single binary, similar to PocketBase, making deployment a breeze. This feature will allow you to set up and run Peach with minimal configuration, enhancing its accessibility and ease of use.
 
-#### **Development Status**
+### **Development Status**
 
 Peach is currently in active development. We're diligently working to bring you a state-of-the-art blob storage solution that is easy to deploy and use. Stay tuned for updates, and feel free to dive into our codebase or suggest features to help shape Peach into the best blob storage service.
 
