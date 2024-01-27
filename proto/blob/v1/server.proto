@@ -1,0 +1,145 @@
+syntax = "proto3";
+
+package blob.v1;
+
+option go_package = "blob/gen/blob/v1";
+
+// --------------------
+// Message Definitions
+// --------------------
+
+// General Messages
+message Empty {
+}
+
+// Bucket-related Messages
+message CreateBucketRequest {
+  string name = 1;
+  string slug = 2;
+}
+
+message Bucket {
+  string name = 1;
+  string slug = 2;
+}
+
+message CreateBucketResponse {
+  Bucket bucket = 1;
+}
+
+message ListBucketsRequest {
+}
+
+message ListBucketsResponse {
+  repeated Bucket buckets = 1;
+}
+
+message DeleteBucketRequest {
+}
+
+message UpdateBucketRequest {
+  string name = 1;
+}
+
+message DeleteBucketResponse {
+}
+
+message UpdateBucketResponse {
+}
+
+// Rule-related Messages
+message CreateRuleRequest {
+  string bucket_name = 1;
+}
+
+message Rule {
+}
+
+message CreateRuleResponse {
+  Rule rule = 1;
+}
+
+message ListRulesResponse {
+  repeated Rule rules = 1;
+}
+
+message ListRulesRequest {
+}
+
+message UpdateRuleResponse {
+}
+
+message UpdateRuleRequest {
+  string bucket = 1;
+}
+
+message DeleteRuleResponse {
+}
+
+message DeleteRuleRequest {
+  string bucket = 1;
+}
+
+// Object-related Messages
+message Object {
+  string name = 1;
+  string bucket = 2;
+}
+
+message CreateObjectRequest {
+  string bucket = 1;
+  string object = 2;
+  bytes data = 3;
+}
+
+message CreateObjectResponse {
+}
+
+message ListObjectsRequest {
+  string bucket = 1;
+}
+
+message ListObjectsResponse {
+  repeated Object objects = 1;
+}
+
+message DeleteObjectRequest {
+  string bucket = 1;
+  string object = 2;
+}
+
+message DeleteObjectResponse {
+}
+
+message UpdateObjectRequest {
+  string bucket = 1;
+  string object = 2;
+  bytes data = 3;
+}
+
+message UpdateObjectResponse {
+}
+
+// --------------------
+// Service Definition
+// --------------------
+
+service BlobService {
+  // Bucket management
+  rpc CreateBucket(CreateBucketRequest) returns (CreateBucketResponse) {}
+  rpc ListBuckets(ListBucketsRequest) returns (ListBucketsResponse) {}
+  rpc DeleteBucket(DeleteBucketRequest) returns (DeleteBucketResponse) {}
+  rpc UpdateBucket(UpdateBucketRequest) returns (UpdateBucketResponse) {}
+
+  // Rules management
+  rpc CreateRule(CreateRuleRequest) returns (CreateRuleResponse) {}
+  rpc ListRules(ListRulesRequest) returns (ListRulesResponse) {}
+  rpc UpdateRule(UpdateRuleRequest) returns (UpdateRuleResponse) {}
+  rpc DeleteRule(DeleteRuleRequest) returns (DeleteRuleResponse) {}
+
+  // Object management
+  rpc CreateObject(CreateObjectRequest) returns (CreateObjectResponse) {}
+  rpc ListObjects(ListObjectsRequest) returns (ListObjectsResponse) {}
+  rpc DeleteObject(DeleteObjectRequest) returns (DeleteObjectResponse) {}
+  rpc UpdateObject(UpdateObjectRequest) returns (UpdateObjectResponse) {}
+}
