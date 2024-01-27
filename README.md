@@ -31,6 +31,37 @@ Features
 
 - **Ease of Setup:** Peach will be available as a single binary, similar to PocketBase, making deployment a breeze. This feature will allow you to set up and run Peach with minimal configuration, enhancing its accessibility and ease of use.
 
+### Example
+```typescript
+import { PeachStorage, ImageResizeAction } from 'peach-storage';
+
+// Initialize Peach storage with TypeScript typings
+const peach = new PeachStorage({
+    apiKey: 'your-api-key',
+    endpoint: 'your-peach-api-endpoint'
+});
+
+// Define a bucket with an image resizing rule
+const bucketConfig = {
+    name: 'my-image-bucket',
+    rules: [
+        {
+            condition: {
+                contentType: 'image/' // Applies to any content type starting with 'image/'
+            },
+            action: {
+                type: ImageResizeAction, // The type of action to perform, in this case, image resizing
+                params: {
+                    width: 120 // Resize to 120px width
+                }
+            }
+        }
+    ]
+};
+
+const bucket = await peach.createBucket(bucketConfig);
+```
+
 ### **Development Status**
 
 Peach is currently in active development. We're diligently working to bring you a state-of-the-art blob storage solution that is easy to deploy and use. Stay tuned for updates, and feel free to dive into our codebase or suggest features to help shape Peach into the best blob storage service.
