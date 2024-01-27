@@ -35,7 +35,7 @@ Features
 ```typescript
 import { PeachStorage, ImageResizeAction } from 'peach-storage';
 
-// Initialize Peach storage with TypeScript typings
+// Initialize Peach 
 const peach = new PeachStorage({
     apiKey: 'your-api-key',
     endpoint: 'your-peach-api-endpoint'
