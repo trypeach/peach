@@ -5,7 +5,8 @@ Welcome to Peach 🍑, the future of blob storage, where we've reimagined how da
 Peach is an open-source project designed to enhance the developer experience, offering new and innovative features. While we're carving our own path, it's important to acknowledge the incredible groundwork laid by AWS S3. S3 is an amazing service that has set a high standard in cloud storage with its scalability, durability, and wide range of features. Our goal is to build upon this foundation and push the boundaries even further.
 
 🌟 If you appreciate our vision and the legacy of great cloud storage solutions like S3, give us a star on GitHub!
-Features
+
+### What is new?
 
 #### 📁 Enhanced Directory Management
 
@@ -35,7 +36,7 @@ Features
 ```typescript
 import { PeachStorage, ImageResizeAction } from 'peach-storage';
 
-// Initialize Peach 
+// Initialize Peach storage 
 const peach = new PeachStorage({
     apiKey: 'your-api-key',
     endpoint: 'your-peach-api-endpoint'
